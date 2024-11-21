@@ -1,0 +1,14 @@
+version: "2.3"
+services:
+  node:
+    image: grimleng/LAB-02-SS
+    container_name: node
+    user: "node"
+    working_dir: /app
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - ./:/app
+    ports:
+      - "80:3000"
