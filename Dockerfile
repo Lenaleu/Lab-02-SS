@@ -1,7 +1,4 @@
-FROM node:latest
-WORKDIR /app
-COPY package*.json ./
-COPY . .
-EXPOSE 3000
-CMD ["node", "index.js"]
-
+FROM mhart/alpine-node
+COPY . /app
+CMD node /app/index.js
+EXPOSE  3000
